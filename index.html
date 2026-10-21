@@ -169,23 +169,37 @@
 
       /* ---------- Hero ---------- */
       .hero{
-        min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-        position:relative;padding:130px 0 0;overflow:hidden;
+        min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+        position:relative;padding:120px 0 48px;overflow:hidden;
       }
       .hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
       .hero-bg picture{display:block;width:100%;height:100%}
-      .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;opacity:.94;transform:scale(1.14);will-change:transform}
+      .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;opacity:.94;transform:scale(1.14);filter:brightness(.88) saturate(1.02);will-change:transform,filter}
       .hero-bg::after{
         content:"";position:absolute;inset:0;
         background:linear-gradient(180deg,rgba(10,6,3,.66) 0%,rgba(10,6,3,.26) 34%,rgba(10,6,3,.55) 62%,rgba(10,6,3,.9) 84%,var(--bg) 100%),
                    radial-gradient(85% 62% at 50% 40%,transparent 46%,rgba(10,6,3,.5) 100%);
       }
       .hero-inner{text-align:center;padding-bottom:56px}
-      .hero-logo{
-        width:clamp(86px,13vw,116px);height:clamp(86px,13vw,116px);border-radius:50%;object-fit:cover;
-        margin:0 auto 20px;border:1px solid var(--gold);
-        box-shadow:0 0 0 7px rgba(217,164,65,.08),0 24px 48px -16px rgba(0,0,0,.85);
+      /* ---------- Entrada imersiva: a logo é a porta de entrada ---------- */
+      .hero-logo-wrap{position:relative;width:fit-content;margin:6px auto 30px}
+      .hero-logo-wrap::before{ /* halo dourado respirando atrás da marca */
+        content:"";position:absolute;inset:-16% -16%;z-index:-1;border-radius:50%;
+        background:radial-gradient(circle,rgba(217,164,65,.34) 0%,rgba(217,164,65,.13) 46%,transparent 70%);
+        filter:blur(10px);animation:logoGlow 6.5s ease-in-out infinite;
       }
+      @keyframes logoGlow{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+      .hero-logo-zoom{will-change:transform,opacity}
+      .hero-logo{
+        display:block;width:clamp(225px,33vw,350px);height:auto;
+        /* a arte é circular sobre fundo preto: a máscara radial dissolve SÓ a margem preta,
+           sem recortar nem redesenhar a marca — o miolo (até ~57% do raio) fica intacto */
+        -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 57%,rgba(0,0,0,.55) 66%,transparent 73%);
+        mask-image:radial-gradient(circle at 50% 50%,#000 57%,rgba(0,0,0,.55) 66%,transparent 73%);
+        filter:drop-shadow(0 26px 44px rgba(0,0,0,.55)) drop-shadow(0 0 34px rgba(217,164,65,.22));
+        animation:logoFloat 7s ease-in-out infinite;
+      }
+      @keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
       /* Entrada cinematográfica do conteúdo do hero (dispara quando o preloader sai) */
       .hero-inner>*{opacity:0;transform:translateY(26px)}
       #preloader.done ~ main .hero-inner>*{animation:heroUp .95s cubic-bezier(.22,1,.36,1) forwards}
@@ -202,7 +216,7 @@
       .hero-rule::after{background:linear-gradient(90deg,var(--gold),transparent)}
       .hero h1{
         font-family:var(--serif);font-weight:600;line-height:.98;margin:22px 0 8px;
-        font-size:clamp(3.1rem,10.5vw,7.6rem);letter-spacing:.01em;
+        font-size:clamp(2.7rem,9vw,6.4rem);letter-spacing:.01em;
       }
       .hero h1 em{font-style:italic;color:var(--gold-soft)}
       .hero .sintonia{
@@ -265,7 +279,8 @@
       .sec-head p{color:var(--muted);margin:0}
 
       /* ---------- Filters ---------- */
-      .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+      .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px;opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+      .filters.in{opacity:1;transform:none}
       .chip{
         border:1px solid var(--line);background:rgba(24,15,7,.6);color:var(--muted);
         border-radius:999px;padding:10px 20px;font-size:.83rem;font-weight:700;letter-spacing:.05em;
@@ -275,7 +290,7 @@
       .chip.active{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 60%,var(--gold-deep));color:#20130a;border-color:transparent}
 
       /* ---------- Product grid ---------- */
-      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:22px}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:22px;perspective:1100px}
       .card{
         background:linear-gradient(180deg,var(--panel-2),var(--panel));
         border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden;
@@ -442,8 +457,8 @@
       .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
       .rv.in{opacity:1;transform:none}
       /* Cards da vitrine: revelação progressiva (fade + slide) ao rolar */
-      .card-rv{opacity:0;transform:translateY(36px)}
-      .card-rv.in{opacity:1;transform:translateY(0);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s}
+      .card-rv{opacity:0;transform:translateY(48px) scale(.94) rotateX(7deg)}
+      .card-rv.in{opacity:1;transform:translateY(0) scale(1) rotateX(0);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s}
 
       @media (max-width:900px){
         .sobre-grid{grid-template-columns:1fr}
@@ -461,7 +476,10 @@
         .price strong{font-size:1.3rem}
         .card .row{flex-direction:column;align-items:flex-start}
         .feats{grid-template-columns:1fr}
-        .hero{padding-top:110px}
+        .hero{padding-top:104px}
+        .hero-logo{width:clamp(200px,58vw,300px)}
+        .hero-rule{letter-spacing:.3em;font-size:.66rem;gap:10px}
+        .hero-rule::before,.hero-rule::after{width:9vw}
         .hero-inner{padding-bottom:104px}
         /* Mobile: foto 9:16 exibida inteira (contain) — fachada completa, logo e nome sem corte;
            as faixas acima/abaixo caem no fundo escuro desfocado já embutido na imagem */
@@ -469,6 +487,8 @@
       }
       @media (prefers-reduced-motion:reduce){
         .grain,.marquee-track,.scroll-hint i{animation:none}
+        .hero-logo,.hero-logo-wrap::before{animation:none}
+        .filters{opacity:1;transform:none;transition:none}
         .rv{opacity:1;transform:none;transition:none}
         .card-rv{opacity:1;transform:none;transition:none}
         .hero-inner>*{opacity:1;transform:none}
@@ -518,9 +538,9 @@
     <main id="topo">
       <!-- Hero -->
       <section class="hero">
-        <div class="hero-bg"><picture><source media="(max-width:760px)" srcset="assets/hero-mobile.jpg" /><img src="assets/hero.jpg" alt="Fachada real da Adega Sintonia 035 à noite, com a faixa amarela iluminada, em Baependi/MG" fetchpriority="high" /></picture></div>
+        <div class="hero-bg"><picture><source media="(max-width:760px)" srcset="assets/hero-mobile.jpg" /><img src="assets/hero.jpg" alt="Interior aconchegante da Adega Sintonia 035, com prateleiras de vinhos e destilados sob luz âmbar quente, em Baependi/MG" fetchpriority="high" /></picture></div>
         <div class="wrap hero-inner">
-          <img class="hero-logo" src="assets/logo.jpg" alt="Logo oficial da Adega Sintonia 035" />
+          <div class="hero-logo-wrap"><div class="hero-logo-zoom"><img class="hero-logo" src="assets/logo.jpg" alt="Logo oficial da Adega Sintonia 035" /></div></div>
           <div class="hero-rule">Adega · Baependi · MG</div>
           <h1>A noite<br />começa <em>aqui.</em></h1>
           <p class="sintonia">Sintonia <b>035</b></p>
@@ -570,7 +590,7 @@
         <div class="wrap">
           <div class="sobre-grid">
             <figure class="sobre-photo rv" style="margin:0">
-              <img class="fachada" loading="lazy" decoding="async" src="assets/fachada.jpg" alt="Fachada da Adega Sintonia 035 à noite, com a faixa amarela da loja, em Baependi/MG" />
+              <img class="fachada" loading="lazy" decoding="async" src="assets/sobre.jpg" alt="Garrafas de destilados e vinho em prateleira de madeira, banhadas por luz dourada, na Adega Sintonia 035" />
               <figcaption>“Na sintonia certa, a noite rende.”</figcaption>
             </figure>
             <div class="rv">
@@ -1007,14 +1027,19 @@
           });
         }, { threshold: 0.1, rootMargin: "0px 0px -5% 0px" });
         document.querySelectorAll(".rv, .card-rv").forEach(function(el){ io.observe(el); });
+        var filtersEl2 = byId("filters");
+        if (filtersEl2) io.observe(filtersEl2);
         /* Rede de segurança: nada fica invisível se o observer não disparar */
         setTimeout(function(){
+          if (filtersEl2 && !filtersEl2.classList.contains("in")) filtersEl2.classList.add("in");
           document.querySelectorAll(".rv:not(.in)").forEach(function(el){ el.classList.add("in"); });
           document.querySelectorAll(".card-rv:not(.in)").forEach(function(el){ el.classList.add("in"); finishCard(el); });
         }, 2600);
       } else {
         document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
         document.querySelectorAll(".card-rv").forEach(function(el){ el.classList.remove("card-rv"); el.style.transitionDelay = ""; });
+        var filtersEl3 = byId("filters");
+        if (filtersEl3) filtersEl3.classList.add("in");
       }
 
       /* ============ Brasas douradas — Three.js + GSAP ScrollTrigger ============ */
@@ -1084,9 +1109,15 @@
             /* Hero: dolly-in panorâmico — ao rolar, a câmera "entra" na adega
                pela porta, com zoom suave na fachada real + ganho de luz */
             gsap.fromTo(".hero-bg img",
-              { scale: 1.14, yPercent: -1.5, transformOrigin: "50% 42%", filter: "brightness(.86) saturate(1.0)" },
-              { scale: 1.48, yPercent: 2.5, filter: "brightness(.97) saturate(1.08)", ease: "none",
+              { scale: 1.14, yPercent: -1.5, transformOrigin: "50% 42%", filter: "brightness(.86) saturate(1.0) blur(2px)" },
+              { scale: 1.52, yPercent: 2.5, filter: "brightness(.97) saturate(1.08) blur(0px)", ease: "none",
                 scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+            /* A porta se abre: a logo cresce e dissolve — o visitante "atravessa" a marca
+               e cai dentro da adega (fundo avançando no dolly acima) rumo às categorias */
+            gsap.to(".hero-logo-zoom", {
+              scale: 1.55, opacity: 0, ease: "none",
+              scrollTrigger: { trigger: ".hero", start: "top top", end: "62% top", scrub: true }
+            });
             /* O conteúdo do hero recua e dissolve enquanto a câmera avança */
             gsap.to(".hero-inner", {
               yPercent: -7, opacity: 0.2, ease: "none",
