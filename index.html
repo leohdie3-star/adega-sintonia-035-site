@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0603'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23e8a020' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+    <title>Adega Sintonia 035 — Bebidas geladas em Baependi/MG | Peça pelo WhatsApp</title>
+    <meta name="description" content="Adega Sintonia 035 em Baependi/MG: cervejas, destilados, vinhos, gelo e carvão. Monte seu pedido na vitrine e finalize pelo WhatsApp. Gelada, rápida e no ponto." />
+    <meta name="keywords" content="adega baependi, bebidas baependi, cerveja gelada, destilados, vinho, gelo, carvão, delivery de bebidas" />
+    <meta name="author" content="Adega Sintonia 035" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0603" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Adega Sintonia 035" />
+    <meta property="og:title" content="Adega Sintonia 035 — A noite começa aqui" />
+    <meta property="og:description" content="Cervejas, destilados, vinhos, gelo e carvão em Baependi/MG. Monte seu pedido e finalize pelo WhatsApp." />
+    <meta property="og:image" content="assets/hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adega Sintonia 035 — Baependi/MG" />
+    <meta name="twitter:description" content="Bebidas geladas, destilados, vinhos, gelo e carvão. Peça pelo WhatsApp." />
+    <meta name="twitter:image" content="assets/hero.jpg" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LiquorStore",
+      "name": "Adega Sintonia 035",
+      "description": "Adega em Baependi/MG com cervejas, destilados, vinhos, bebidas sem álcool, gelo e carvão. Pedidos pelo WhatsApp.",
+      "telephone": "+55 35 98876-9652",
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Baependi",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "14:00" }
+      ],
+      "sameAs": ["https://www.instagram.com/adegasintonia"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --bg:#0a0603;
+        --bg-2:#120b05;
+        --panel:#180f07;
+        --panel-2:#1f130a;
+        --gold:#d9a441;
+        --gold-soft:#eec27a;
+        --gold-deep:#9a6b21;
+        --amber:#e07f2e;
+        --cream:#f6ecd9;
+        --muted:#c2b096;
+        --faint:#8f7f68;
+        --line:rgba(217,164,65,.22);
+        --line-soft:rgba(217,164,65,.12);
+        --green:#3ecf6e;
+        --radius:18px;
+        --serif:"Cormorant Garamond",Georgia,serif;
+        --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      html,body{overflow-x:hidden}
+      body{
+        margin:0;background:var(--bg);color:var(--cream);
+        font-family:var(--sans);font-size:16px;line-height:1.6;
+        -webkit-font-smoothing:antialiased;
+      }
+      ::selection{background:var(--gold);color:#1a1005}
+      img{display:block;max-width:100%}
+      a{color:inherit}
+      button{font-family:inherit;cursor:pointer}
+      :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+      /* ---------- WebGL embers canvas ---------- */
+      #embers{
+        position:fixed;inset:0;width:100%;height:100%;
+        z-index:0;pointer-events:none;
+      }
+      /* ---------- Cinematic grain ---------- */
+      .grain{
+        position:fixed;inset:-100px;z-index:70;pointer-events:none;opacity:.07;
+        background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        animation:grain 7s steps(10) infinite;
+      }
+      @keyframes grain{
+        0%,100%{transform:translate(0,0)}10%{transform:translate(-4%,-6%)}
+        30%{transform:translate(3%,-4%)}50%{transform:translate(-5%,3%)}
+        70%{transform:translate(5%,5%)}90%{transform:translate(-3%,2%)}
+      }
+      .vignette{
+        position:fixed;inset:0;z-index:1;pointer-events:none;
+        background:radial-gradient(120% 90% at 50% 0%,transparent 55%,rgba(0,0,0,.5) 100%);
+      }
+
+      /* ---------- Preloader ---------- */
+      #preloader{
+        position:fixed;inset:0;z-index:200;background:#070402;
+        display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+        transition:transform .9s cubic-bezier(.76,0,.24,1),opacity .9s;
+      }
+      #preloader.done{transform:translateY(-100%);opacity:.98}
+      .pre-mono{
+        width:86px;height:86px;border:1px solid var(--gold);border-radius:50%;
+        display:flex;align-items:center;justify-content:center;position:relative;
+      }
+      .pre-mono::before{content:"";position:absolute;inset:6px;border:1px solid var(--line-soft);border-radius:50%}
+      .pre-mono span{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold-soft);letter-spacing:.04em}
+      .pre-logo{width:118px;height:118px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);box-shadow:0 0 0 8px rgba(217,164,65,.07),0 22px 44px -16px rgba(0,0,0,.85)}
+      .pre-name{font-family:var(--serif);font-size:clamp(1.5rem,5vw,2.2rem);font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cream);text-align:center;padding-left:.28em}
+      .pre-sub{font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:var(--faint);padding-left:.42em}
+      .pre-bar{width:min(260px,60vw);height:1px;background:rgba(217,164,65,.2);position:relative;overflow:hidden}
+      .pre-bar i{position:absolute;inset:0;background:var(--gold);transform-origin:left;transform:scaleX(0)}
+      .pre-pct{font-size:.75rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:600}
+
+      /* ---------- Header ---------- */
+      header{
+        position:fixed;top:0;left:0;right:0;z-index:60;
+        display:flex;align-items:center;justify-content:space-between;gap:16px;
+        padding:14px clamp(16px,4vw,44px);
+        background:linear-gradient(180deg,rgba(7,4,2,.88),rgba(7,4,2,.55) 70%,transparent);
+        backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+      }
+      .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+      .brand-mono{
+        width:44px;height:44px;flex:none;border:1px solid var(--gold);border-radius:50%;
+        display:flex;align-items:center;justify-content:center;position:relative;
+      }
+      .brand-mono::before{content:"";position:absolute;inset:4px;border:1px solid var(--line-soft);border-radius:50%}
+      .brand-mono span{font-family:var(--serif);font-weight:700;font-size:1.02rem;color:var(--gold-soft)}
+      .brand-logo{width:46px;height:46px;flex:none;border-radius:50%;object-fit:cover;border:1px solid var(--gold);background:#000}
+      footer .brand-logo{width:52px;height:52px}
+      .brand-text{line-height:1.05}
+      .brand-text strong{display:block;font-family:var(--serif);font-size:1.18rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+      .brand-text small{display:block;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin-top:3px}
+      nav.main-nav{display:flex;gap:30px}
+      nav.main-nav a{
+        text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+        position:relative;padding:4px 0;transition:color .25s;
+      }
+      nav.main-nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.65,0,.35,1)}
+      nav.main-nav a:hover{color:var(--cream)}
+      nav.main-nav a:hover::after{transform:scaleX(1);transform-origin:left}
+      .cart-btn{
+        display:flex;align-items:center;gap:9px;background:rgba(24,15,7,.75);
+        border:1px solid var(--line);color:var(--cream);border-radius:999px;
+        padding:9px 16px;font-size:.82rem;font-weight:700;letter-spacing:.08em;
+        transition:border-color .25s,background .25s;position:relative;
+      }
+      .cart-btn:hover{border-color:var(--gold);background:rgba(38,24,11,.9)}
+      .cart-btn svg{width:18px;height:18px;stroke:var(--gold-soft)}
+      .cart-count{
+        min-width:22px;height:22px;border-radius:999px;background:var(--gold);color:#1c1104;
+        display:inline-flex;align-items:center;justify-content:center;font-size:.74rem;font-weight:800;padding:0 6px;
+        transition:transform .2s;
+      }
+      .cart-count.pop{transform:scale(1.35)}
+
+      main{position:relative;z-index:2}
+      .wrap{width:min(1220px,100% - 40px);margin-inline:auto}
+
+      /* ---------- Hero ---------- */
+      .hero{
+        min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+        position:relative;padding:130px 0 0;overflow:hidden;
+      }
+      .hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+      .hero-bg picture{display:block;width:100%;height:100%}
+      .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;opacity:.94;transform:scale(1.14);will-change:transform}
+      .hero-bg::after{
+        content:"";position:absolute;inset:0;
+        background:linear-gradient(180deg,rgba(10,6,3,.66) 0%,rgba(10,6,3,.26) 34%,rgba(10,6,3,.55) 62%,rgba(10,6,3,.9) 84%,var(--bg) 100%),
+                   radial-gradient(85% 62% at 50% 40%,transparent 46%,rgba(10,6,3,.5) 100%);
+      }
+      .hero-inner{text-align:center;padding-bottom:56px}
+      .hero-logo{
+        width:clamp(86px,13vw,116px);height:clamp(86px,13vw,116px);border-radius:50%;object-fit:cover;
+        margin:0 auto 20px;border:1px solid var(--gold);
+        box-shadow:0 0 0 7px rgba(217,164,65,.08),0 24px 48px -16px rgba(0,0,0,.85);
+      }
+      /* Entrada cinematográfica do conteúdo do hero (dispara quando o preloader sai) */
+      .hero-inner>*{opacity:0;transform:translateY(26px)}
+      #preloader.done ~ main .hero-inner>*{animation:heroUp .95s cubic-bezier(.22,1,.36,1) forwards}
+      #preloader.done ~ main .hero-inner>*:nth-child(2){animation-delay:.08s}
+      #preloader.done ~ main .hero-inner>*:nth-child(3){animation-delay:.16s}
+      #preloader.done ~ main .hero-inner>*:nth-child(4){animation-delay:.24s}
+      #preloader.done ~ main .hero-inner>*:nth-child(5){animation-delay:.32s}
+      #preloader.done ~ main .hero-inner>*:nth-child(6){animation-delay:.42s}
+      #preloader.done ~ main .hero-inner>*:nth-child(7){animation-delay:.52s}
+      #preloader.done ~ main .hero-inner>*:nth-child(8){animation-delay:.62s}
+      @keyframes heroUp{to{opacity:1;transform:none}}
+      .hero-rule{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold-soft);font-size:.7rem;font-weight:700;letter-spacing:.44em;text-transform:uppercase}
+      .hero-rule::before,.hero-rule::after{content:"";width:min(72px,16vw);height:1px;background:linear-gradient(90deg,transparent,var(--gold));display:block}
+      .hero-rule::after{background:linear-gradient(90deg,var(--gold),transparent)}
+      .hero h1{
+        font-family:var(--serif);font-weight:600;line-height:.98;margin:22px 0 8px;
+        font-size:clamp(3.1rem,10.5vw,7.6rem);letter-spacing:.01em;
+      }
+      .hero h1 em{font-style:italic;color:var(--gold-soft)}
+      .hero .sintonia{
+        font-family:var(--serif);font-size:clamp(1.35rem,3.6vw,2.2rem);letter-spacing:.52em;
+        text-transform:uppercase;color:var(--cream);font-weight:500;padding-left:.52em;margin:10px 0 0;
+      }
+      .hero .sintonia b{color:var(--gold);font-weight:600}
+      .hero p.lead{
+        max-width:560px;margin:26px auto 0;color:var(--muted);font-size:clamp(1rem,2.4vw,1.13rem);line-height:1.7;
+      }
+      .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+      .btn{
+        display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:999px;
+        padding:15px 30px;font-weight:800;font-size:.9rem;letter-spacing:.06em;
+        transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;border:1px solid transparent;
+      }
+      .btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep));color:#20130a;box-shadow:0 12px 34px -10px rgba(217,164,65,.55)}
+      .btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px rgba(217,164,65,.65)}
+      .btn-ghost{border-color:var(--line);color:var(--cream);background:rgba(18,11,5,.5)}
+      .btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px)}
+      .btn svg{width:18px;height:18px;flex:none}
+      .hero-meta{
+        display:flex;justify-content:center;gap:clamp(20px,6vw,64px);flex-wrap:wrap;
+        margin-top:52px;padding:22px 10px 0;border-top:1px solid var(--line-soft);
+      }
+      .hero-meta div{text-align:center}
+      .hero-meta strong{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold-soft);line-height:1.1}
+      .hero-meta span{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
+      .scroll-hint{
+        margin:34px auto 26px;width:24px;height:40px;border:1px solid var(--line);border-radius:999px;
+        display:flex;justify-content:center;padding-top:8px;
+      }
+      .scroll-hint i{width:4px;height:8px;border-radius:4px;background:var(--gold);animation:hint 1.8s ease-in-out infinite}
+      @keyframes hint{0%,100%{transform:translateY(0);opacity:1}55%{transform:translateY(12px);opacity:.2}}
+
+      /* ---------- Marquee ---------- */
+      .marquee{
+        border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        background:rgba(18,11,5,.72);overflow:hidden;padding:15px 0;position:relative;z-index:2;
+      }
+      .marquee-track{display:flex;gap:0;width:max-content;animation:marquee 30s linear infinite}
+      .marquee:hover .marquee-track{animation-play-state:paused}
+      .marquee-track span{
+        display:inline-flex;align-items:center;gap:26px;padding-right:26px;white-space:nowrap;
+        font-family:var(--serif);font-size:1.06rem;font-style:italic;color:var(--gold-soft);letter-spacing:.06em;
+      }
+      .marquee-track span::after{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex:none}
+      @keyframes marquee{to{transform:translateX(-50%)}}
+
+      /* ---------- Sections ---------- */
+      section{padding:clamp(72px,10vw,120px) 0;position:relative}
+      .sec-head{max-width:680px;margin-bottom:clamp(34px,5vw,54px)}
+      .sec-head.center{margin-inline:auto;text-align:center}
+      .sec-tag{font-size:.7rem;font-weight:800;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+      .sec-head.center .sec-tag{justify-content:center}
+      .sec-tag::before{content:"";width:34px;height:1px;background:var(--gold)}
+      .sec-head.center .sec-tag::after{content:"";width:34px;height:1px;background:var(--gold)}
+      .sec-head h2{font-family:var(--serif);font-size:clamp(2.1rem,5.4vw,3.4rem);font-weight:600;line-height:1.08;margin:16px 0 12px}
+      .sec-head h2 em{font-style:italic;color:var(--gold-soft)}
+      .sec-head p{color:var(--muted);margin:0}
+
+      /* ---------- Filters ---------- */
+      .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+      .chip{
+        border:1px solid var(--line);background:rgba(24,15,7,.6);color:var(--muted);
+        border-radius:999px;padding:10px 20px;font-size:.83rem;font-weight:700;letter-spacing:.05em;
+        transition:all .25s;
+      }
+      .chip:hover{color:var(--cream);border-color:var(--gold)}
+      .chip.active{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 60%,var(--gold-deep));color:#20130a;border-color:transparent}
+
+      /* ---------- Product grid ---------- */
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));gap:22px}
+      .card{
+        background:linear-gradient(180deg,var(--panel-2),var(--panel));
+        border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden;
+        display:flex;flex-direction:column;position:relative;
+        transition:transform .35s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s;
+      }
+      .card:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 26px 50px -22px rgba(0,0,0,.8)}
+      .card.hide{display:none}
+      .card-img{position:relative;aspect-ratio:4/3.1;background:#f4efe6;overflow:hidden}
+      .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+      .card:hover .card-img img{transform:scale(1.06)}
+      .badge{
+        position:absolute;top:12px;left:12px;z-index:2;
+        background:rgba(12,7,3,.88);color:var(--gold-soft);border:1px solid var(--line);
+        font-size:.64rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+        padding:6px 11px;border-radius:999px;backdrop-filter:blur(3px);
+      }
+      .card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+      .card-cat{font-size:.64rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--amber)}
+      .card h3{font-family:var(--serif);font-size:1.42rem;font-weight:600;line-height:1.15;margin:2px 0 0}
+      .card .vol{color:var(--faint);font-size:.85rem}
+      .card .row{margin-top:auto;padding-top:14px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+      .price{line-height:1}
+      .price small{display:block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+      .price strong{font-family:var(--serif);font-size:1.55rem;font-weight:700;color:var(--gold-soft)}
+      .stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+      .stepper button{
+        width:34px;height:38px;background:transparent;border:0;color:var(--gold-soft);
+        font-size:1.05rem;font-weight:700;line-height:1;transition:background .2s;
+      }
+      .stepper button:hover{background:rgba(217,164,65,.14)}
+      .stepper output{min-width:26px;text-align:center;font-weight:800;font-size:.92rem}
+      .add-btn{
+        margin-top:14px;width:100%;border:1px solid var(--gold);background:transparent;color:var(--gold-soft);
+        border-radius:12px;padding:12px;font-weight:800;font-size:.86rem;letter-spacing:.1em;text-transform:uppercase;
+        display:flex;align-items:center;justify-content:center;gap:9px;
+        transition:background .25s,color .25s,transform .15s;
+      }
+      .add-btn:hover{background:var(--gold);color:#20130a}
+      .add-btn:active{transform:scale(.97)}
+      .add-btn svg{width:16px;height:16px}
+
+      /* ---------- Sobre ---------- */
+      .sobre-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+      .sobre-photo{position:relative}
+      .sobre-photo::before{
+        content:"";position:absolute;inset:0;transform:translate(16px,16px);
+        border:1px solid var(--line);border-radius:22px;z-index:0;
+      }
+      .sobre-photo img{position:relative;z-index:1;border-radius:22px;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4;box-shadow:0 34px 70px -30px rgba(0,0,0,.85)}
+      .sobre-photo img.fachada{aspect-ratio:4/4.7;object-position:center 30%}
+      .sobre-photo figcaption{
+        position:absolute;z-index:2;left:18px;bottom:18px;background:rgba(10,6,3,.82);border:1px solid var(--line);
+        border-radius:12px;padding:10px 16px;font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--gold-soft);
+        backdrop-filter:blur(4px);
+      }
+      .feats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+      .feat{border:1px solid var(--line-soft);border-radius:14px;padding:16px;background:rgba(24,15,7,.55)}
+      .feat svg{width:22px;height:22px;stroke:var(--gold);margin-bottom:8px}
+      .feat strong{display:block;font-size:.95rem;margin-bottom:3px}
+      .feat span{font-size:.84rem;color:var(--muted);line-height:1.5;display:block}
+
+      /* ---------- Contato ---------- */
+      .contato-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+      .info-card{border:1px solid var(--line-soft);border-radius:var(--radius);padding:28px 24px;background:linear-gradient(180deg,var(--panel-2),var(--panel))}
+      .info-card svg{width:26px;height:26px;stroke:var(--gold);margin-bottom:14px}
+      .info-card h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;margin:0 0 10px}
+      .info-card p,.info-card li{color:var(--muted);font-size:.94rem}
+      .info-card p{margin:0}
+      .info-card ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+      .info-card li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line-soft);padding-bottom:7px}
+      .info-card li:last-child{border-bottom:0;padding-bottom:0}
+      .info-card li b{color:var(--cream);font-weight:700;white-space:nowrap}
+      .info-card a.big-link{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold-soft);text-decoration:none}
+      .info-card a.big-link:hover{text-decoration:underline}
+
+      /* ---------- Footer ---------- */
+      footer{border-top:1px solid var(--line);background:rgba(9,5,2,.9);position:relative;z-index:2;padding:56px 0 34px}
+      .foot-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;margin-bottom:38px}
+      .foot-grid nav{display:flex;flex-direction:column;gap:9px}
+      .foot-grid nav a{color:var(--muted);text-decoration:none;font-size:.9rem}
+      .foot-grid nav a:hover{color:var(--gold-soft)}
+      .foot-grid h4{font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+      .foot-bottom{border-top:1px solid var(--line-soft);padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--faint);font-size:.8rem}
+      .age-note{color:#a4553f;font-weight:600} .dev-credit{color:var(--faint)}
+
+      /* ---------- Cart drawer ---------- */
+      .overlay{
+        position:fixed;inset:0;background:rgba(4,2,1,.66);backdrop-filter:blur(3px);
+        z-index:80;opacity:0;pointer-events:none;transition:opacity .35s;
+      }
+      .overlay.open{opacity:1;pointer-events:auto}
+      .drawer{
+        position:fixed;top:0;right:0;height:100dvh;width:min(430px,94vw);z-index:90;
+        background:linear-gradient(180deg,#1d1208,#120a04);border-left:1px solid var(--line);
+        transform:translateX(105%);visibility:hidden;
+        transition:transform .5s cubic-bezier(.76,0,.24,1),visibility 0s linear .55s;
+        display:flex;flex-direction:column;box-shadow:-30px 0 60px rgba(0,0,0,.5);
+      }
+      .drawer.open{transform:translateX(0);visibility:visible;transition:transform .5s cubic-bezier(.76,0,.24,1),visibility 0s}
+      .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:22px 22px 16px;border-bottom:1px solid var(--line-soft)}
+      .drawer-head h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin:0}
+      .drawer-head h3 span{color:var(--gold-soft);font-size:1rem;font-style:italic}
+      .close-btn{background:transparent;border:1px solid var(--line);color:var(--cream);width:38px;height:38px;border-radius:50%;font-size:1rem;line-height:1;transition:border-color .2s}
+      .close-btn:hover{border-color:var(--gold)}
+      .drawer-items{flex:1;overflow-y:auto;padding:16px 22px;display:flex;flex-direction:column;gap:14px}
+      .empty-cart{text-align:center;color:var(--faint);padding:48px 10px;font-family:var(--serif);font-style:italic;font-size:1.15rem}
+      .citem{display:flex;gap:13px;border:1px solid var(--line-soft);border-radius:14px;padding:11px;background:rgba(10,6,3,.4)}
+      .citem img{width:62px;height:62px;border-radius:9px;object-fit:cover;flex:none;background:#f4efe6}
+      .citem-info{flex:1;min-width:0}
+      .citem-info strong{display:block;font-size:.92rem;line-height:1.3}
+      .citem-info small{color:var(--faint);font-size:.78rem}
+      .citem-row{display:flex;align-items:center;justify-content:space-between;margin-top:8px;gap:8px}
+      .citem .stepper button{width:28px;height:30px;font-size:.95rem}
+      .citem .stepper output{min-width:22px;font-size:.85rem}
+      .citem-price{font-family:var(--serif);font-weight:700;color:var(--gold-soft);font-size:1.05rem;white-space:nowrap}
+      .remove-btn{background:none;border:0;color:#c96f4a;font-size:.74rem;font-weight:700;letter-spacing:.06em;padding:2px 0;text-transform:uppercase}
+      .remove-btn:hover{text-decoration:underline}
+      .drawer-foot{border-top:1px solid var(--line-soft);padding:18px 22px 22px;background:rgba(10,6,3,.45)}
+      .field{margin-bottom:12px}
+      .field label{display:block;font-size:.68rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin-bottom:7px}
+      .field input,.field textarea{
+        width:100%;background:rgba(246,236,217,.05);border:1px solid var(--line-soft);border-radius:11px;
+        color:var(--cream);padding:12px 14px;font-family:inherit;font-size:.95rem;resize:none;
+      }
+      .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+      .total-row{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 16px}
+      .total-row span{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+      .total-row strong{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--gold-soft)}
+      .checkout-btn{
+        width:100%;border:0;border-radius:13px;padding:16px;font-size:1rem;font-weight:800;letter-spacing:.04em;
+        background:linear-gradient(135deg,#4be07a,#22b455 60%,#159947);color:#06170c;
+        display:flex;align-items:center;justify-content:center;gap:10px;
+        box-shadow:0 14px 32px -12px rgba(46,204,113,.55);transition:transform .2s,box-shadow .2s,opacity .2s;
+      }
+      .checkout-btn:hover:not(:disabled){transform:translateY(-2px)}
+      .checkout-btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+      .checkout-btn svg{width:20px;height:20px}
+      .drawer-note{text-align:center;color:var(--faint);font-size:.76rem;margin:11px 0 0}
+
+      /* ---------- Floating cart (mobile) ---------- */
+      .fab{
+        position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:65;
+        width:60px;height:60px;border-radius:50%;border:1px solid var(--gold);
+        background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));color:#20130a;
+        display:none;align-items:center;justify-content:center;box-shadow:0 16px 34px -8px rgba(0,0,0,.7);
+        opacity:0;pointer-events:none;transform:translateY(18px);transition:opacity .35s,transform .35s;
+      }
+      .fab.show{opacity:1;pointer-events:auto;transform:none}
+      .fab svg{width:25px;height:25px}
+      .fab .cart-count{position:absolute;top:-5px;right:-5px;border:2px solid var(--bg)}
+
+      /* ---------- Toast ---------- */
+      .toast{
+        position:fixed;left:50%;bottom:26px;transform:translate(-50%,90px);z-index:120;
+        background:#221507;border:1px solid var(--gold);color:var(--cream);border-radius:999px;
+        padding:12px 22px;font-size:.88rem;font-weight:600;display:flex;gap:9px;align-items:center;
+        box-shadow:0 20px 44px -12px rgba(0,0,0,.8);transition:transform .45s cubic-bezier(.22,1,.36,1);max-width:92vw;text-align:center;
+      }
+      .toast.show{transform:translate(-50%,0)}
+      .toast svg{width:16px;height:16px;stroke:var(--green);flex:none}
+
+      /* ---------- Reveal ---------- */
+      .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+      .rv.in{opacity:1;transform:none}
+      /* Cards da vitrine: revelação progressiva (fade + slide) ao rolar */
+      .card-rv{opacity:0;transform:translateY(36px)}
+      .card-rv.in{opacity:1;transform:translateY(0);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1),border-color .35s,box-shadow .35s}
+
+      @media (max-width:900px){
+        .sobre-grid{grid-template-columns:1fr}
+        .contato-grid{grid-template-columns:1fr}
+        .sobre-photo img{aspect-ratio:16/10}
+        .sobre-photo img.fachada{aspect-ratio:4/3.4}
+      }
+      @media (max-width:760px){
+        nav.main-nav{display:none}
+        .fab{display:flex}
+        .hero-inner{padding-bottom:56px}
+        .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+        .card-body{padding:14px}
+        .card h3{font-size:1.18rem}
+        .price strong{font-size:1.3rem}
+        .card .row{flex-direction:column;align-items:flex-start}
+        .feats{grid-template-columns:1fr}
+        .hero{padding-top:110px}
+        .hero-inner{padding-bottom:104px}
+        /* Mobile: foto 9:16 exibida inteira (contain) — fachada completa, logo e nome sem corte;
+           as faixas acima/abaixo caem no fundo escuro desfocado já embutido na imagem */
+        .hero-bg img{object-fit:contain;object-position:50% 42%}
+      }
+      @media (prefers-reduced-motion:reduce){
+        .grain,.marquee-track,.scroll-hint i{animation:none}
+        .rv{opacity:1;transform:none;transition:none}
+        .card-rv{opacity:1;transform:none;transition:none}
+        .hero-inner>*{opacity:1;transform:none}
+        #preloader.done ~ main .hero-inner>*{animation:none}
+        html{scroll-behavior:auto}
+        .card,.btn,.drawer,.overlay{transition:none}
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="embers" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" role="status" aria-label="Carregando Adega Sintonia 035">
+      <img class="pre-logo" src="assets/logo.jpg" alt="Logo oficial da Adega Sintonia 035" />
+      <div>
+        <div class="pre-name">Adega Sintonia</div>
+        <div class="pre-sub" style="text-align:center;margin-top:8px">035 · Baependi · MG</div>
+      </div>
+      <div class="pre-bar"><i id="preBarFill"></i></div>
+      <div class="pre-pct" id="prePct">0%</div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <a class="brand" href="#topo" aria-label="Adega Sintonia 035 — início">
+        <img class="brand-logo" src="assets/logo.jpg" alt="Logo da Adega Sintonia 035" />
+        <span class="brand-text">
+          <strong>Sintonia 035</strong>
+          <small>Adega · Baependi</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">A Adega</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="cart-btn" id="openCartTop" type="button" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h15l-1.5 9h-12z"/><path d="M6 7L5 3H2"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg>
+        Pedido
+        <span class="cart-count" id="cartCountTop">0</span>
+      </button>
+    </header>
+
+    <main id="topo">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-bg"><picture><source media="(max-width:760px)" srcset="assets/hero-mobile.jpg" /><img src="assets/hero.jpg" alt="Fachada real da Adega Sintonia 035 à noite, com a faixa amarela iluminada, em Baependi/MG" fetchpriority="high" /></picture></div>
+        <div class="wrap hero-inner">
+          <img class="hero-logo" src="assets/logo.jpg" alt="Logo oficial da Adega Sintonia 035" />
+          <div class="hero-rule">Adega · Baependi · MG</div>
+          <h1>A noite<br />começa <em>aqui.</em></h1>
+          <p class="sintonia">Sintonia <b>035</b></p>
+          <p class="lead">Cerveja trincando de gelada, destilados de respeito, vinho pro brinde e tudo pro seu churrasco. Monte o pedido na vitrine e finalize pelo WhatsApp — simples assim.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="#produtos">
+              Ver a vitrine
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/5535988769652?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Adega%20Sintonia%20035%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.87 9.87 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.25-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.58 1.8-1.18.33-.6.33-1.12.23-1.22-.1-.11-.23-.17-.48-.29z"/></svg>
+              Pedir no WhatsApp
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>12+</strong><span>Itens na vitrine</span></div>
+            <div><strong>5</strong><span>Categorias</span></div>
+            <div><strong>035</strong><span>Baependi e região</span></div>
+            <div><strong>7 dias</strong><span>Na semana</span></div>
+          </div>
+          <div class="scroll-hint" aria-hidden="true"><i></i></div>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marqueeTrack">
+          <span>Cerveja gelada</span><span>Destilados premium</span><span>Vinhos selecionados</span><span>Gelo &amp; carvão</span><span>Peça pelo WhatsApp</span><span>Baependi · MG</span>
+        </div>
+      </div>
+
+      <!-- Produtos -->
+      <section id="produtos">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <div class="sec-tag">Vitrine</div>
+            <h2>Escolha, monte o pedido<br />e <em>chama no zap.</em></h2>
+            <p>Preço da vitrine, sem enrolação. Ajuste a quantidade, adicione ao pedido e finalize no WhatsApp com tudo já organizado pra gente.</p>
+          </div>
+          <div class="filters" id="filters" role="group" aria-label="Filtrar produtos por categoria"></div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section id="sobre" style="padding-top:20px">
+        <div class="wrap">
+          <div class="sobre-grid">
+            <figure class="sobre-photo rv" style="margin:0">
+              <img class="fachada" loading="lazy" decoding="async" src="assets/fachada.jpg" alt="Fachada da Adega Sintonia 035 à noite, com a faixa amarela da loja, em Baependi/MG" />
+              <figcaption>“Na sintonia certa, a noite rende.”</figcaption>
+            </figure>
+            <div class="rv">
+              <div class="sec-tag">A Adega</div>
+              <h2 style="font-family:var(--serif);font-size:clamp(2.1rem,5.4vw,3.4rem);font-weight:600;line-height:1.08;margin:16px 0 14px">Tradição de bairro,<br /><em style="color:var(--gold-soft)">capricho de boutique.</em></h2>
+              <p style="color:var(--muted);margin:0 0 14px">A Sintonia 035 nasceu em Baependi com uma ideia simples: bebida boa, gelada de verdade e atendimento de quem conhece o cliente pelo nome. Da cerveja do dia a dia ao rótulo especial da comemoração, a prateleira é montada pensando na sua noite.</p>
+              <p style="color:var(--muted);margin:0">Aqui você monta o pedido sem sair de casa e a gente separa tudo com o mesmo cuidado de quem recebe amigo no balcão.</p>
+              <div class="feats">
+                <div class="feat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 8c2 1.6 4.5 2.4 7 2.4S17 9.6 19 8M5 16c2 1.6 4.5 2.4 7 2.4s5-.8 7-2.4"/><path d="M12 3l-2 3m2-3l2 3"/></svg>
+                  <strong>Sempre gelada</strong>
+                  <span>Cerveja e refrigerante no ponto, prontos pra sair.</span>
+                </div>
+                <div class="feat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5z"/></svg>
+                  <strong>Pedido pelo WhatsApp</strong>
+                  <span>Sem cadastro e sem app: montou, enviou, resolvido.</span>
+                </div>
+                <div class="feat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>
+                  <strong>Feita pra Baependi</strong>
+                  <span>Atendimento local, do bairro pra cidade inteira.</span>
+                </div>
+                <div class="feat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M17 4H7v5a5 5 0 0 0 10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>
+                  <strong>Pro seu churrasco</strong>
+                  <span>Gelo, carvão e a bebida completa num pedido só.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" style="padding-top:20px">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <div class="sec-tag">Contato</div>
+            <h2>Passa aqui ou <em>chama no zap.</em></h2>
+            <p>Retirada no balcão ou entrega combinada na hora do pedido. Fala com a gente:</p>
+          </div>
+          <div class="contato-grid">
+            <div class="info-card rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.4-6.5-10.4a6.5 6.5 0 1 1 13 0C18.5 15.6 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.4"/></svg>
+              <h3>Onde estamos</h3>
+              <p>Baependi · Minas Gerais<br />Atendemos a cidade e a região pelo WhatsApp — chama que a gente combina a entrega ou a retirada.</p>
+            </div>
+            <div class="info-card rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+              <h3>Horários</h3>
+              <ul>
+                <li><span>Segunda a sábado</span><b>9h — 23h</b></li>
+                <li><span>Domingo</span><b>10h — 14h</b></li>
+                <li><span>Feriados</span><b>Consulte no zap</b></li>
+              </ul>
+            </div>
+            <div class="info-card rv">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5z"/></svg>
+              <h3>WhatsApp</h3>
+              <p style="margin-bottom:10px">Pedidos, dúvidas e encomendas:</p>
+              <a class="big-link" href="https://wa.me/5535988769652" target="_blank" rel="noopener">(35) 98876-9652</a>
+              <p style="margin:16px 0 6px">Telefone da loja (o da fachada):</p>
+              <a class="big-link" style="font-size:1.2rem" href="https://wa.me/5535997074351" target="_blank" rel="noopener">(35) 99707-4351</a>
+              <p style="margin-top:10px">Instagram: <a href="https://www.instagram.com/adegasintonia" target="_blank" rel="noopener" style="color:var(--gold-soft);font-weight:700;text-decoration:none">@adegasintonia</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div style="max-width:320px">
+            <a class="brand" href="#topo" style="margin-bottom:16px">
+              <img class="brand-logo" src="assets/logo.jpg" alt="Logo da Adega Sintonia 035" />
+              <span class="brand-text"><strong>Sintonia 035</strong><small>Adega · Baependi</small></span>
+            </a>
+            <p style="color:var(--muted);font-size:.9rem;margin:14px 0 0">Bebidas geladas, destilados, vinhos, gelo e carvão em Baependi/MG. Monte seu pedido na vitrine e finalize pelo WhatsApp.</p>
+          </div>
+          <div>
+            <h4>Navegação</h4>
+            <nav aria-label="Links do rodapé">
+              <a href="#produtos">Produtos</a>
+              <a href="#sobre">A Adega</a>
+              <a href="#contato">Contato</a>
+            </nav>
+          </div>
+          <div>
+            <h4>Categorias</h4>
+            <nav aria-label="Categorias de produtos">
+              <a href="#produtos" data-cat-link="cervejas">Cervejas</a>
+              <a href="#produtos" data-cat-link="destilados">Destilados</a>
+              <a href="#produtos" data-cat-link="sem-alcool">Sem álcool</a>
+              <a href="#produtos" data-cat-link="vinhos">Vinhos</a>
+              <a href="#produtos" data-cat-link="gelo-carvao">Gelo &amp; Carvão</a>
+            </nav>
+          </div>
+          <div>
+            <h4>Atendimento</h4>
+            <nav aria-label="Atendimento">
+              <a href="https://wa.me/5535988769652" target="_blank" rel="noopener">WhatsApp (35) 98876-9652</a>
+              <a href="#contato">Seg a Sáb · 9h às 23h</a>
+              <a href="#contato">Baependi · MG</a>
+            </nav>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span>© 2026 Adega Sintonia 035 · Baependi/MG</span>
+          <span class="age-note">Proibida a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.</span> <span class="dev-credit">Site desenvolvido pela <span style="color:var(--gold-soft)">Consultoria Digital</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating cart button (mobile) -->
+    <button class="fab" id="openCartFab" type="button" aria-label="Abrir meu pedido">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h15l-1.5 9h-12z"/><path d="M6 7L5 3H2"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg>
+      <span class="cart-count" id="cartCountFab">0</span>
+    </button>
+
+    <!-- Cart drawer -->
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Meu pedido">
+      <div class="drawer-head">
+        <h3>Meu pedido <span id="drawerCount"></span></h3>
+        <button class="close-btn" id="closeCart" type="button" aria-label="Fechar pedido">✕</button>
+      </div>
+      <div class="drawer-items" id="drawerItems"></div>
+      <div class="drawer-foot">
+        <div class="field">
+          <label for="custName">Seu nome</label>
+          <input id="custName" type="text" placeholder="Ex.: Maria Silva" autocomplete="name" maxlength="60" />
+        </div>
+        <div class="field">
+          <label for="custNote">Observações <span style="text-transform:none;letter-spacing:0">(opcional)</span></label>
+          <textarea id="custNote" rows="2" placeholder="Ex.: entregar no portão, capricha no gelo…" maxlength="200"></textarea>
+        </div>
+        <div class="total-row"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+        <button class="checkout-btn" id="checkoutBtn" type="button" disabled>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.87 9.87 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.25-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.58 1.8-1.18.33-.6.33-1.12.23-1.22-.1-.11-.23-.17-.48-.29z"/></svg>
+          Finalizar no WhatsApp
+        </button>
+        <p class="drawer-note">Você confirma o pedido direto com a adega no WhatsApp.</p>
+      </div>
+    </aside>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      <span id="toastMsg">Adicionado ao pedido</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+    (function(){
+      "use strict";
+
+      /* ============ Dados da vitrine ============ */
+      var CATEGORIES = [
+        { id:"todas", label:"Todas" },
+        { id:"cervejas", label:"Cervejas" },
+        { id:"destilados", label:"Destilados" },
+        { id:"sem-alcool", label:"Sem álcool" },
+        { id:"vinhos", label:"Vinhos" },
+        { id:"gelo-carvao", label:"Gelo & Carvão" }
+      ];
+      var CAT_LABEL = {};
+      CATEGORIES.forEach(function(c){ CAT_LABEL[c.id] = c.label; });
+
+      var PRODUCTS = [
+        { id:"skol",      name:"Skol Pilsen",                 detail:"Garrafa · 600 ml",        price:8.90,   cat:"cervejas",   badge:"Mais vendida", img:"assets/prod-skol.webp",     alt:"Garrafa de cerveja Skol 600 ml" },
+        { id:"brahma",    name:"Brahma Chopp",                detail:"Latão · 473 ml",          price:5.49,   cat:"cervejas",   badge:"Geladíssima",  img:"assets/prod-brahma.jpg",    alt:"Latão de cerveja Brahma Chopp 473 ml" },
+        { id:"heineken",  name:"Heineken Premium Lager",      detail:"Long neck · 330 ml",      price:7.99,   cat:"cervejas",   badge:"Premium",      img:"assets/prod-heineken.jpg",  alt:"Garrafa long neck Heineken 330 ml" },
+        { id:"absolut",   name:"Vodka Absolut Original",      detail:"Garrafa · 1 L",           price:119.90, cat:"destilados", badge:"Premium",      img:"assets/prod-absolut.jpg",   alt:"Garrafa de vodka Absolut 1 litro" },
+        { id:"johnnie",   name:"Johnnie Walker Red Label",    detail:"Whisky · 1 L",            price:139.90, cat:"destilados", badge:"Clássico",     img:"assets/prod-johnnie.jpg",   alt:"Garrafa de whisky Johnnie Walker Red Label 1 litro" },
+        { id:"cachaca51", name:"Cachaça 51",                  detail:"Garrafa · 965 ml",        price:21.90,  cat:"destilados", badge:"Tradição",     img:"assets/prod-cachaca51.jpg", alt:"Garrafa de Cachaça 51 965 ml" },
+        { id:"coca",      name:"Coca-Cola Original",          detail:"Lata · 350 ml",           price:4.99,   cat:"sem-alcool", badge:"",             img:"assets/prod-coca.jpg",      alt:"Lata de Coca-Cola 350 ml" },
+        { id:"guarana",   name:"Guaraná Antarctica",          detail:"Lata · 350 ml",           price:4.49,   cat:"sem-alcool", badge:"",             img:"assets/prod-guarana.jpg",   alt:"Lata de Guaraná Antarctica 350 ml" },
+        { id:"monster",   name:"Monster Energy",              detail:"Energético · 473 ml",     price:11.90,  cat:"sem-alcool", badge:"Energia",      img:"assets/prod-monster.jpg",   alt:"Lata de energético Monster Energy 473 ml" },
+        { id:"vinho",     name:"Casillero del Diablo Merlot", detail:"Vinho tinto · 750 ml",    price:64.90,  cat:"vinhos",     badge:"Importado",    img:"assets/prod-vinho.jpg",     alt:"Garrafa de vinho tinto Casillero del Diablo Merlot 750 ml" },
+        { id:"gelo",      name:"Gelo em Escamas",             detail:"Saco · 3 kg",             price:12.00,  cat:"gelo-carvao",badge:"Pro churrasco",img:"assets/prod-gelo.webp",     alt:"Saco de gelo em escamas 3 kg" },
+        { id:"carvao",    name:"Carvão Especial p/ Churrasco",detail:"Saco · 3 kg",             price:18.90,  cat:"gelo-carvao",badge:"",             img:"assets/prod-carvao.jpg",    alt:"Saco de carvão especial para churrasco 3 kg" }
+      ];
+      var WHATS = "5535988769652";
+
+      function brl(v){
+        return v.toLocaleString("pt-BR",{ style:"currency", currency:"BRL" });
+      }
+      function byId(id){ return document.getElementById(id); }
+
+      /* ============ Preloader ============ */
+      var pre = byId("preloader"), preFill = byId("preBarFill"), prePct = byId("prePct");
+      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var pct = 0;
+      var preTimer = setInterval(function(){
+        pct = Math.min(100, pct + (reduced ? 34 : 4 + Math.random()*9));
+        preFill.style.transform = "scaleX(" + (pct/100) + ")";
+        prePct.textContent = Math.floor(pct) + "%";
+        if (pct >= 100){
+          clearInterval(preTimer);
+          setTimeout(function(){
+            pre.classList.add("done");
+            setTimeout(function(){ pre.style.display = "none"; }, 950);
+          }, 180);
+        }
+      }, reduced ? 30 : 46);
+      /* Segurança: nunca prender o visitante no preloader */
+      setTimeout(function(){
+        if (pre.style.display !== "none"){ pre.classList.add("done"); setTimeout(function(){ pre.style.display="none"; }, 950); }
+      }, 5000);
+
+      /* ============ Marquee (duplica para loop infinito) ============ */
+      var track = byId("marqueeTrack");
+      track.innerHTML += track.innerHTML;
+
+      /* ============ Filtros ============ */
+      var filtersEl = byId("filters");
+      CATEGORIES.forEach(function(c, i){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "chip" + (i === 0 ? " active" : "");
+        b.textContent = c.label;
+        b.dataset.cat = c.id;
+        b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+        b.addEventListener("click", function(){ setFilter(c.id); });
+        filtersEl.appendChild(b);
+      });
+      function setFilter(cat){
+        filtersEl.querySelectorAll(".chip").forEach(function(ch){
+          var on = ch.dataset.cat === cat;
+          ch.classList.toggle("active", on);
+          ch.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        document.querySelectorAll(".card").forEach(function(card){
+          card.classList.toggle("hide", cat !== "todas" && card.dataset.cat !== cat);
+        });
+      }
+      document.querySelectorAll("[data-cat-link]").forEach(function(a){
+        a.addEventListener("click", function(){ setFilter(a.dataset.catLink); });
+      });
+
+      /* ============ Vitrine ============ */
+      var grid = byId("grid");
+      var pendingQty = {}; /* quantidades escolhidas nos cards */
+      PRODUCTS.forEach(function(p, idx){
+        pendingQty[p.id] = 1;
+        var card = document.createElement("article");
+        card.className = "card card-rv";
+        card.style.transitionDelay = ((idx % 4) * 70) + "ms";
+        card.dataset.cat = p.cat;
+        card.innerHTML =
+          '<div class="card-img">' +
+            (p.badge ? '<span class="badge">' + p.badge + '</span>' : '') +
+            '<img loading="lazy" decoding="async" src="' + p.img + '" alt="' + p.alt + '" />' +
+          '</div>' +
+          '<div class="card-body">' +
+            '<span class="card-cat">' + CAT_LABEL[p.cat] + '</span>' +
+            '<h3>' + p.name + '</h3>' +
+            '<span class="vol">' + p.detail + '</span>' +
+            '<div class="row">' +
+              '<div class="price"><small>Por apenas</small><strong>' + brl(p.price) + '</strong></div>' +
+              '<div class="stepper" role="group" aria-label="Quantidade de ' + p.name + '">' +
+                '<button type="button" data-act="minus" aria-label="Diminuir quantidade">−</button>' +
+                '<output data-qty>1</output>' +
+                '<button type="button" data-act="plus" aria-label="Aumentar quantidade">+</button>' +
+              '</div>' +
+            '</div>' +
+            '<button type="button" class="add-btn">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>' +
+              'Adicionar ao pedido' +
+            '</button>' +
+          '</div>';
+        var out = card.querySelector("[data-qty]");
+        card.querySelector('[data-act="minus"]').addEventListener("click", function(){
+          pendingQty[p.id] = Math.max(1, pendingQty[p.id] - 1); out.textContent = pendingQty[p.id];
+        });
+        card.querySelector('[data-act="plus"]').addEventListener("click", function(){
+          pendingQty[p.id] = Math.min(99, pendingQty[p.id] + 1); out.textContent = pendingQty[p.id];
+        });
+        card.querySelector(".add-btn").addEventListener("click", function(){
+          addToCart(p.id, pendingQty[p.id]);
+          pendingQty[p.id] = 1; out.textContent = 1;
+        });
+        grid.appendChild(card);
+      });
+
+      /* ============ Carrinho (estado em memória) ============ */
+      var cart = {}; /* id -> qtd */
+      var drawer = byId("drawer"), overlay = byId("overlay"),
+          itemsEl = byId("drawerItems"), totalEl = byId("cartTotal"),
+          checkoutBtn = byId("checkoutBtn"), drawerCount = byId("drawerCount");
+
+      function cartCount(){
+        return Object.keys(cart).reduce(function(s,id){ return s + cart[id]; }, 0);
+      }
+      function cartTotal(){
+        return Object.keys(cart).reduce(function(s,id){
+          var p = PRODUCTS.filter(function(x){ return x.id === id; })[0];
+          return s + p.price * cart[id];
+        }, 0);
+      }
+      function syncBadges(pop){
+        var n = cartCount();
+        [byId("cartCountTop"), byId("cartCountFab")].forEach(function(el){
+          el.textContent = n;
+          if (pop){ el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
+        });
+        drawerCount.textContent = n ? "· " + n + (n === 1 ? " item" : " itens") : "";
+      }
+      function renderCart(){
+        var ids = Object.keys(cart);
+        if (!ids.length){
+          itemsEl.innerHTML = '<div class="empty-cart">Seu pedido está vazio por enquanto.<br />Escolha algo gelado na vitrine.</div>';
+        } else {
+          itemsEl.innerHTML = "";
+          ids.forEach(function(id){
+            var p = PRODUCTS.filter(function(x){ return x.id === id; })[0];
+            var row = document.createElement("div");
+            row.className = "citem";
+            row.innerHTML =
+              '<img loading="lazy" decoding="async" src="' + p.img + '" alt="" />' +
+              '<div class="citem-info">' +
+                '<strong>' + p.name + '</strong>' +
+                '<small>' + p.detail + ' · ' + brl(p.price) + ' un.</small>' +
+                '<div class="citem-row">' +
+                  '<div class="stepper" role="group" aria-label="Quantidade de ' + p.name + ' no pedido">' +
+                    '<button type="button" data-a="minus" aria-label="Diminuir">−</button>' +
+                    '<output>' + cart[id] + '</output>' +
+                    '<button type="button" data-a="plus" aria-label="Aumentar">+</button>' +
+                  '</div>' +
+                  '<span class="citem-price">' + brl(p.price * cart[id]) + '</span>' +
+                '</div>' +
+                '<button type="button" class="remove-btn">Remover</button>' +
+              '</div>';
+            row.querySelector('[data-a="minus"]').addEventListener("click", function(){
+              cart[id]--; if (cart[id] <= 0) delete cart[id]; renderCart(); syncBadges(false);
+            });
+            row.querySelector('[data-a="plus"]').addEventListener("click", function(){
+              cart[id] = Math.min(99, cart[id] + 1); renderCart(); syncBadges(false);
+            });
+            row.querySelector(".remove-btn").addEventListener("click", function(){
+              delete cart[id]; renderCart(); syncBadges(false);
+            });
+            itemsEl.appendChild(row);
+          });
+        }
+        totalEl.textContent = brl(cartTotal());
+        checkoutBtn.disabled = !ids.length;
+      }
+      function addToCart(id, qty){
+        cart[id] = Math.min(99, (cart[id] || 0) + qty);
+        renderCart(); syncBadges(true);
+        var p = PRODUCTS.filter(function(x){ return x.id === id; })[0];
+        showToast(qty + "× " + p.name + " no pedido");
+      }
+
+      /* ============ Drawer ============ */
+      function openCart(){
+        drawer.classList.add("open"); overlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        byId("closeCart").focus();
+      }
+      function closeCart(){
+        drawer.classList.remove("open"); overlay.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+      byId("openCartTop").addEventListener("click", openCart);
+      byId("openCartFab").addEventListener("click", openCart);
+      byId("closeCart").addEventListener("click", closeCart);
+      overlay.addEventListener("click", closeCart);
+      document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeCart(); });
+
+      /* FAB surge só depois do hero, pra não cobrir o conteúdo inicial */
+      var fab = byId("openCartFab");
+      function syncFab(){ fab.classList.toggle("show", window.scrollY > window.innerHeight * 0.55); }
+      window.addEventListener("scroll", syncFab, { passive: true });
+      syncFab();
+
+      /* ============ Toast ============ */
+      var toast = byId("toast"), toastMsg = byId("toastMsg"), toastTimer = null;
+      function showToast(msg){
+        toastMsg.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 2600);
+      }
+
+      /* ============ Checkout WhatsApp ============ */
+      checkoutBtn.addEventListener("click", function(){
+        var ids = Object.keys(cart);
+        if (!ids.length) return;
+        var name = byId("custName").value.trim();
+        var note = byId("custNote").value.trim();
+        var lines = [];
+        lines.push("*NOVO PEDIDO — ADEGA SINTONIA 035*");
+        lines.push("--------------------------------");
+        if (name) lines.push("Nome: " + name);
+        lines.push("");
+        ids.forEach(function(id){
+          var p = PRODUCTS.filter(function(x){ return x.id === id; })[0];
+          lines.push(cart[id] + "x " + p.name + " (" + p.detail + ") — " + brl(p.price * cart[id]));
+        });
+        lines.push("--------------------------------");
+        lines.push("*TOTAL: " + brl(cartTotal()) + "*");
+        if (note){ lines.push(""); lines.push("Obs.: " + note); }
+        lines.push("");
+        lines.push("Pedido feito pelo site da adega.");
+        var url = "https://wa.me/" + WHATS + "?text=" + encodeURIComponent(lines.join("\n"));
+        window.open(url, "_blank", "noopener");
+      });
+
+      renderCart(); syncBadges(false);
+
+      /* ============ Reveal on scroll (seções + cards da vitrine) ============ */
+      function finishCard(el){
+        /* Depois da revelação, devolve o card ao comportamento normal (hover etc.) */
+        setTimeout(function(){
+          el.classList.remove("card-rv", "in");
+          el.style.transitionDelay = "";
+        }, 980);
+      }
+      if ("IntersectionObserver" in window && !reduced){
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if (en.isIntersecting){
+              en.target.classList.add("in");
+              if (en.target.classList.contains("card-rv")) finishCard(en.target);
+              io.unobserve(en.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -5% 0px" });
+        document.querySelectorAll(".rv, .card-rv").forEach(function(el){ io.observe(el); });
+        /* Rede de segurança: nada fica invisível se o observer não disparar */
+        setTimeout(function(){
+          document.querySelectorAll(".rv:not(.in)").forEach(function(el){ el.classList.add("in"); });
+          document.querySelectorAll(".card-rv:not(.in)").forEach(function(el){ el.classList.add("in"); finishCard(el); });
+        }, 2600);
+      } else {
+        document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+        document.querySelectorAll(".card-rv").forEach(function(el){ el.classList.remove("card-rv"); el.style.transitionDelay = ""; });
+      }
+
+      /* ============ Brasas douradas — Three.js + GSAP ScrollTrigger ============ */
+      var canvas = byId("embers");
+      if (window.THREE && canvas){
+        try {
+          var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, (window.innerWidth < 760 || (navigator.hardwareConcurrency || 8) <= 4) ? 1.5 : 2));
+          var scene = new THREE.Scene();
+          var camera = new THREE.PerspectiveCamera(58, window.innerWidth / window.innerHeight, 0.1, 200);
+          camera.position.set(0, 0, 26);
+
+          function makeSprite(){
+            var c = document.createElement("canvas"); c.width = c.height = 64;
+            var g = c.getContext("2d");
+            var grad = g.createRadialGradient(32,32,0,32,32,32);
+            grad.addColorStop(0, "rgba(255,226,160,1)");
+            grad.addColorStop(0.35, "rgba(240,178,84,0.85)");
+            grad.addColorStop(0.7, "rgba(190,105,32,0.28)");
+            grad.addColorStop(1, "rgba(140,60,10,0)");
+            g.fillStyle = grad; g.fillRect(0,0,64,64);
+            return new THREE.CanvasTexture(c);
+          }
+          var COUNT = reduced ? 90 : ((window.innerWidth < 760 || (navigator.hardwareConcurrency || 8) <= 4) ? 150 : 340);
+          var geo = new THREE.BufferGeometry();
+          var pos = new Float32Array(COUNT * 3);
+          var seed = new Float32Array(COUNT * 3); /* velocidade, fase, tamanho */
+          for (var i = 0; i < COUNT; i++){
+            pos[i*3]   = (Math.random() - 0.5) * 64;
+            pos[i*3+1] = (Math.random() - 0.5) * 90;
+            pos[i*3+2] = (Math.random() - 0.5) * 34;
+            seed[i*3]   = 0.35 + Math.random() * 1.15;   /* velocidade de subida */
+            seed[i*3+1] = Math.random() * Math.PI * 2;   /* fase do balanço */
+            seed[i*3+2] = 0.5 + Math.random() * 1.6;    /* escala */
+          }
+          geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+          var mat = new THREE.PointsMaterial({
+            size: 0.85, map: makeSprite(), transparent: true, depthWrite: false,
+            blending: THREE.AdditiveBlending, color: 0xf5b95c, opacity: 0.9,
+            sizeAttenuation: true
+          });
+          var embers = new THREE.Points(geo, mat);
+          scene.add(embers);
+
+          /* Brilho ambiente quente no fundo da cena */
+          var glowGeo = new THREE.PlaneGeometry(160, 110);
+          var glowMat = new THREE.MeshBasicMaterial({ color: 0x2a1503, transparent: true, opacity: 0.55, depthWrite: false });
+          var glow = new THREE.Mesh(glowGeo, glowMat);
+          glow.position.z = -22; scene.add(glow);
+
+          function resize(){
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+          }
+          resize();
+          window.addEventListener("resize", resize);
+
+          /* Câmera pilotada pelo scroll */
+          var scrollState = { y: 0, rot: 0, z: 26 };
+          if (window.gsap && window.ScrollTrigger && !reduced){
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(scrollState, {
+              y: -46, rot: 0.55, z: 15, ease: "none",
+              scrollTrigger: { trigger: document.body, start: "top top", end: "bottom bottom", scrub: 1.1 }
+            });
+            /* Hero: dolly-in panorâmico — ao rolar, a câmera "entra" na adega
+               pela porta, com zoom suave na fachada real + ganho de luz */
+            gsap.fromTo(".hero-bg img",
+              { scale: 1.14, yPercent: -1.5, transformOrigin: "50% 42%", filter: "brightness(.86) saturate(1.0)" },
+              { scale: 1.48, yPercent: 2.5, filter: "brightness(.97) saturate(1.08)", ease: "none",
+                scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+            /* O conteúdo do hero recua e dissolve enquanto a câmera avança */
+            gsap.to(".hero-inner", {
+              yPercent: -7, opacity: 0.2, ease: "none",
+              scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+            });
+          }
+
+          var mx = 0, my = 0;
+          if (!reduced){
+            window.addEventListener("pointermove", function(e){
+              mx = (e.clientX / window.innerWidth - 0.5) * 2;
+              my = (e.clientY / window.innerHeight - 0.5) * 2;
+            }, { passive: true });
+          }
+
+          var frameSkip = 0; var clock = new THREE.Clock();
+          var running = true;
+          document.addEventListener("visibilitychange", function(){ running = !document.hidden; });
+          (function animate(){
+            requestAnimationFrame(animate);
+            if (!running) return; frameSkip++; if (window.scrollY > window.innerHeight * 2 && (frameSkip % 3 !== 0)) return;
+            var t = clock.getElapsedTime();
+            var arr = geo.attributes.position.array;
+            for (var j = 0; j < COUNT; j++){
+              arr[j*3+1] += seed[j*3] * 0.016 * (reduced ? 0.25 : 1);
+              arr[j*3]   += Math.sin(t * 0.7 + seed[j*3+1]) * 0.006;
+              if (arr[j*3+1] > 48){
+                arr[j*3+1] = -48;
+                arr[j*3] = (Math.random() - 0.5) * 64;
+              }
+            }
+            geo.attributes.position.needsUpdate = true;
+            embers.rotation.z = Math.sin(t * 0.05) * 0.02;
+            camera.position.y += ((scrollState.y + my * -1.2) - camera.position.y) * 0.06;
+            camera.position.x += ((mx * 1.6) - camera.position.x) * 0.05;
+            camera.position.z += (scrollState.z - camera.position.z) * 0.06;
+            camera.rotation.y = scrollState.rot * 0.4 + mx * 0.03;
+            camera.lookAt(camera.position.x * 0.4, camera.position.y - 2, 0);
+            renderer.render(scene, camera);
+          })();
+        } catch (err) {
+          canvas.style.display = "none";
+        }
+      }
+    })();
+    </script>
+  </body>
+</html>
